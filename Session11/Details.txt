@@ -1,0 +1,17 @@
+Session11 - How to use a custom dataloader - data_loader.py
+Exp1.1 - Initialization of Weights of a CNN - In this experiment we will see 'Xavier', 'Zero', 'normal' and 'he' intialization of weights in a Lenet neural network.
+Exp1.2 - Momentum Hyper parameter tuning - The objective of this experiment is to tune the hyper parameter called momentum and observe the output differences.
+Exp1.3 - LR Hyperparameter fine tuning - The objective of this experiment is to tune the hyper parameter called learning rate and observe the changes in the output.
+Exp1.4 - Optimizer ADAM - The objective of this experiment is to tune the optimizer - Adam and observe the changes in the output.
+Exp2.1 - Extracting features using pre-trained CNN (Transfer Learning) -only tweaking the FC layer for claasification
+In this experiment we want to perform face recognition of 16 Indian celebrities from IMFDB dataset. We simply pick the model (lightCNN) trained for face recognition on million of images and thousands of individuals. We use the feature coming out of this model to train a new classifier to identify 16 Indian celebrities.
+
+Exp2.2 - Fine-tuning pre-trained CNN
+We will see what happens when we tweak only a small specific part of the pre-trained model. 
+We will also see how to tweak the entire model
+
+pytorch_pretrainedmodels - Fine tuning InceptionV3 model from Pytorch torchvision.models
+
+Exp2.3 - Siamese networks
+
+Exp3.1 - Supervision from web data (extrcat images from net using browser plugin's and train a CNN)
