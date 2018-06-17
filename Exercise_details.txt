@@ -1,0 +1,197 @@
+goo.gl/kV8cns -> google drive where all the experiments are shared
+
+Session1 - 
+Exp 0-
+Pandas - pd.read_csv()
+matplotlib.pyplot - 2D plot
+Exp2 -
+Collections
+
+Session2-
+Exp1-
+from mpl_toolkits.mplot3d import Axes3D -> 3D plot
+Exp2 -
+pd.read_csv("wdbc.data",header = None, converters={30:labelConvert}) -> Converters to convert "string" to "int"
+Confuson Matrix, False positive, true positive..
+Exp3-
+pickle/unpickle files
+
+Session3-
+Exp1- 
+Iris dataset
+Features = iris_data.iloc[:,0:4].values
+Labels = iris_data.iloc[:,4:5].values
+Exp2-
+minmax scaling
+Exp3 -
+visualize_image
+X_train = np.asarray(X_train) -> convert list to numpy array
+extract_2classes(class0, class1, X, Y) -> extract 2 class data out of multi class data
+
+Session3A-
+Exp0 -
+Pima Indians Dataset
+Exp1 -
+Cifar-10 dataset
+
+Session4-
+Exp1-
+Clebrity image dataset
+cv2.imread() - Read images and plot it
+# Read all images in the "faces" directory into a image list
+images = []
+Image resizing and Image normalization/scaling
+
+Exp2-
+Text Classification - Bag of words, Word2vec
+Exp3-
+Speech/audio recognition 
+
+Session5-
+Exp1 - Linear Regression
+Exp1-part3 - Gradient descent
+Exp1-part4 - Stochastic Gradient
+Exp1-part5 - Mini-batch Gradient descent
+Exp2- part3 - Logistic regression
+
+session6-
+Exp1 - Kmeans clustering
+Exp2 - Hierarchical Clustering on MNIST Dataset
+Exp3 - Generating Swiss roll data
+	Applying PCA on Swiss roll data
+	Applying isomap on Swiss roll data
+	Applying LLE on Swiss roll data
+
+
+Session7 -
+Exp0 - Sk learn perceptron model, sklearn datasets, train_test split and accraccy score
+from sklearn import datasets
+from sklearn.preprocessing import StandardScaler
+from sklearn.linear_model import Perceptron
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+
+Exp1 - part1 - sklearn MLP on XOR data
+import numpy as np
+from sklearn.neural_network import MLPClassifier
+from sklearn.linear_model import Perceptron
+Exp1 - part2 - Visualization
+
+Exp2 - part1
+Projecting data into a different space to remove non-linearity
+In this experiment, we will visualize how data which is non-linearly separable in the given space might become linearly separable in a different space.
+Exp3 - 
+Applying non-linear Regression
+
+Casestudy1 - Objectives: Create a non-linear regression based product rating solution.
+caststudy2 - This dataset describes the minimum daily temperatures over 10 years (1981-1990) in the city Melbourne, Australia.
+The units are in degrees Celsius and there are 3,650 observations. The source of the data is credited as the Australian Bureau of Meteorology.
+
+Fitting linear and non-linear regression to this "time series" data
+
+from matplotlib import pyplot
+from pandas import Series
+series = Series.from_csv('daily-minimum-temperatures-in-me.csv', header=0)
+print(series.head())
+series.plot()
+
+Session8-
+Exp1 - MLP and Backpropagation theory -Training MLP
+Exp2- overfitting
+Exp3- part1 - Hyper parameters
+Exp3 - part2 - Leave one Out (Leave One Out is a special form of Cross-Validation.)
+Exp3 - part3 - K-fold cross-validation
+Exp4 - Regularization
+Exp5 - Biasvs Variance
+Cast Study1 - Towards modern backpropagation
+Caststudy2 - Comparison of Linear, Logistic regression, Quadratic, MLP and SVM
+from sklearn import svm
+
+Session9-
+Exp1 - Pytorch introduction - ***********From Here mostly PYTORCH is used********************
+Loading MNIST dataset and Visualize
+Defining Loss functions
+Doing forward pass
+Run the classifier the complete test set and compute accuracy.
+import torch
+import torch.nn as nn
+import torchvision.datasets as dsets
+import torchvision.transforms as transforms
+from torch.autograd import Variable
+import matplotlib.pyplot as plt
+
+Exp2 - Pytorch GPU instance
+train_loader = torch.utils.data.DataLoader( 
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+import torch.optim as optim
+from torchvision import datasets, transforms
+from torch.autograd import Variable
+
+Exp3 - In this Experiment we will use mnist dataset and will be implementing MLP and BP(Back Propagation) from the last lab in pytorch.
+
+Exp4 - CNN introduction using pytorch
+Specifying the dataset and how it should be loaded.
+Specifying a Neural Network Model
+Specify the Loss function and Gradient Update Algorithm
+Training Loop
+Compute the Accuracy on Testing dataset
+
+Exp5 - part1 - RNN - In this experiment we will use RNN to classify text one character at a time. 
+We will be using shakespeare.txt as our input file to the classifier.
+
+Session10 -
+Exp1 - Auto Encoder introduction
+Exp2 - Visulaizing CNN's - we will first follow the approach used by Matthew D Zeiler, Rob Fergus to visualize CNNs. We will visualize a VGG16 model trained on the Imagenet dataset.
+Exp3 - Part1 - Transfer Learning and Fine Tuning using Pytorch pretrained models
+Exp4 - RNNs for financial forecasting
+n this experiment, we will be using stock market dataset. The dataset contains historical daily price and volume data for all US-based stocks and E TFs trading on the NYSE, NASDAQ, and NYSE MKT.
+Exp5 - The aim of this experiment is to perform non-linear dimensionality reduction using an Autoencoder.
+import numpy as np 
+import pandas as pd 
+import matplotlib.pyplot as plt
+### importing pytorch packages
+import torch
+from torch.utils.data import Dataset
+from torch.autograd import Variable
+from torch.utils.data import DataLoader
+from torch import nn
+import torch.autograd as autograd
+from sklearn import manifold
+
+Session11 - How to use a custom dataloader - data_loader.py
+Exp1.1 - Initialization of Weights of a CNN - In this experiment we will see 'Xavier', 'Zero', 'normal' and 'he' intialization of weights in a Lenet neural network.
+Exp1.2 - Momentum Hyper parameter tuning - The objective of this experiment is to tune the hyper parameter called momentum and observe the output differences.
+Exp1.3 - LR Hyperparameter fine tuning - The objective of this experiment is to tune the hyper parameter called learning rate and observe the changes in the output.
+Exp1.4 - Optimizer ADAM - The objective of this experiment is to tune the optimizer - Adam and observe the changes in the output.
+Exp2.1 - Extracting features using pre-trained CNN (Transfer Learning) -only tweaking the FC layer for claasification
+In this experiment we want to perform face recognition of 16 Indian celebrities from IMFDB dataset. We simply pick the model (lightCNN) trained for face recognition on million of images and thousands of individuals. We use the feature coming out of this model to train a new classifier to identify 16 Indian celebrities.
+
+Exp2.2 - Fine-tuning pre-trained CNN
+We will see what happens when we tweak only a small specific part of the pre-trained model. 
+We will also see how to tweak the entire model
+
+pytorch_pretrainedmodels - Fine tuning InceptionV3 model from Pytorch torchvision.models
+
+Exp2.3 - Siamese networks
+
+Exp3.1 - Supervision from web data (extrcat images from net using browser plugin's and train a CNN)
+
+Session12- Decision Tree
+Exp0 - Entropy Calculation and Decision tree
+
+
+Session13 -
+Exp1 - Regularization_Pruning
+Exp2 -Quantization
+Exp3 - Student_teacher netwrok
+Exp4 - Neuron_Pruning (different from weights pruning)
+
+Session14 -
+Exp2A - Relevance Feedback (weighted KNN and Rocchio Algorithm)
+Exp2B - Diversity in Retrieval
+
+
+
+ 
